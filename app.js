@@ -91,16 +91,16 @@
     document.body.removeChild(input);
   }
 
-  // --- Theme Management (Dark Cybertruck vs Light Fitness Clay) ---
+  // --- Theme Management (Light Mode vs Dark Mode) ---
   function initTheme() {
-    const savedTheme = localStorage.getItem('mm_portfolio_theme') || DATA.themeConfig?.defaultTheme || 'dark';
+    const savedTheme = localStorage.getItem('mm_portfolio_theme') || DATA.themeConfig?.defaultTheme || 'light';
     document.documentElement.setAttribute('data-theme', savedTheme);
     updateThemeToggleUI(savedTheme);
   }
 
   function toggleTheme() {
     playTactileClick();
-    const current = document.documentElement.getAttribute('data-theme') || 'dark';
+    const current = document.documentElement.getAttribute('data-theme') || 'light';
     const next = current === 'dark' ? 'light' : 'dark';
     document.documentElement.setAttribute('data-theme', next);
     localStorage.setItem('mm_portfolio_theme', next);
@@ -111,6 +111,15 @@
     const btn = document.getElementById('themeToggleBtn');
     if (!btn) return;
     if (theme === 'dark') {
+      btn.setAttribute('title', 'Switch to Light Mode');
+      btn.innerHTML = `
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+        <span>Dark Mode</span>
+      `;
+    } else {
+      btn.setAttribute('title', 'Switch to Dark Mode');
       btn.innerHTML = `
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="12" cy="12" r="5"></circle>
@@ -123,14 +132,7 @@
           <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
           <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
         </svg>
-        <span>Cybertruck Dark</span>
-      `;
-    } else {
-      btn.innerHTML = `
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-        </svg>
-        <span>Fitness Clay Light</span>
+        <span>Light Mode</span>
       `;
     }
   }

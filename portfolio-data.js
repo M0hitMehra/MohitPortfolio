@@ -314,9 +314,9 @@ const PORTFOLIO_DATA = {
     }
   ],
 
-  // --- Theme Defaults (Supports Light Neumorphic & Tesla Dark Neumorphic from reference) ---
+  // --- Theme Defaults (Supports Light Mode & Dark Mode) ---
   themeConfig: {
-    defaultTheme: "dark", // "dark" for Cybertruck sleek neumorphism, "light" for soft fitness clay neumorphism
+    defaultTheme: "light", // "light" for Light Mode by default, "dark" for Dark Mode
     allowThemeToggle: true,
     enableTactileSounds: true // Subtle synthesized click sound on tactile button press
   }
