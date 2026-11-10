@@ -1,1173 +1,340 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohit Mehra | Software Development Engineer - 2 (SDE-2)</title>
+  <meta name="description" content="Portfolio of Mohit Mehra — SDE-2 specializing in high-throughput distributed architectures, RabbitMQ event streaming, and Model Context Protocol (MCP) AI systems.">
+  <meta name="author" content="Mohit Mehra">
+  <meta property="og:title" content="Mohit Mehra | SDE-2 Portfolio">
+  <meta property="og:description" content="Full Stack & Distributed Systems Engineer with 3+ years experience. View projects, architecture benchmarks, and interactive resume.">
+  <meta property="og:type" content="website">
 
-    <!--==================== UNICONS ====================-->
-    <link
-      rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
-    />
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 
-    <!--==================== SWIPER CSS ====================-->
-    <link rel="stylesheet" href="./packages/css/swiper-bundle.min.css" />
+  <!-- Neumorphic Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <!--==================== CSS ====================-->
-    <link rel="stylesheet" href="./packages/css/styles.css" />
-
-    <title>Mohit Mehra Portfolio</title>
-  </head>
-  <body>
-    <!--==================== HEADER ====================-->
-    <header class="header" id="header">
-      <nav class="nav container">
-        <a href="#" class="nav__logo">Mohit Mehra</a>
-        <div class="nav__menu" id="nav-menu">
-          <ul class="nav__list grid">
-            <li class="nav__item">
-              <a href="#home" class="nav__link">
-                <i class="uil uil-estate nav__icon"></i>Home
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#about" class="nav__link">
-                <i class="uil uil-user nav__icon"></i>About
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#skills" class="nav__link">
-                <i class="uil uil-file-alt nav__icon"></i>Skills
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#services" class="nav__link">
-                <i class="uil uil-briefcase-alt nav__icon"></i>Services
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#portfolio" class="nav__link">
-                <i class="uil uil-scenery nav__icon"></i>Portfolio
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#contact" class="nav__link">
-                <i class="uil uil-message nav__icon"></i>Contact
-              </a>
-            </li>
-          </ul>
-          <i class="uil uil-times nav__close" id="nav-close"></i>
+  <!-- ==============================================================================
+       STICKY NEUMORPHIC NAVBAR
+       ============================================================================== -->
+  <div class="navbar-wrapper">
+    <nav class="navbar container">
+      <div class="brand-badge">
+        <div class="brand-logo-pod">MM</div>
+        <div class="brand-text">
+          <span class="brand-name" id="brandName">Mohit Mehra</span>
+          <span class="brand-sub" id="brandSub">SDE-2 • Distributed Systems & AI</span>
         </div>
-        <div class="nav__btns">
-          <!-- Theme change button -->
-
-          <i class="uil uil-moon change-theme" id="theme-button"></i>
-
-          <div class="nav__toggle" id="nav-toggle">
-            <i class="uil uil-apps"></i>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    <!--==================== MAIN ====================-->
-    <main class="main">
-      <!--==================== HOME ====================-->
-      <section class="home section" id="home">
-        <div class="home__container container grid">
-          <div class="home__content grid">
-            <div class="home__social">
-              <a
-                href="https://www.linkedin.com/in/mohit-mehra-6ba923227/"
-                target="_blank"
-                class="home__social-icon"
-              >
-                <i class="uil uil-linkedin-alt"></i>
-              </a>
-              <a
-                href="https://twitter.com/M0hitMehra"
-                target="_blank"
-                class="home__social-icon"
-              >
-                <i class="uil uil-twitter-alt"></i>
-              </a>
-              <a
-                href="https://github.com/M0hitMehra"
-                target="_blank"
-                class="home__social-icon"
-              >
-                <i class="uil uil-github-alt"></i>
-              </a>
-            </div>
-            <div class="home__img">
-              <svg
-                class="home__blob"
-                viewBox="0 0 200 187"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-              >
-                <mask id="mask0" mask-type="alpha">
-                  <path
-                    d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
-                                    130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
-                                    97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-                                    0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"
-                  />
-                </mask>
-                <g mask="url(#mask0)">
-                  <path
-                    d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
-                                    165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
-                                    129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-                                    -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"
-                  />
-                  <image
-                    class="home__blob-img"
-                    x=""
-                    xlink:href="packages/images/profileFront.jpg"
-                  />
-                </g>
-              </svg>
-            </div>
-
-            <div class="home__data">
-              <h1 class="home__title">Hi, I'am Mohit Mehra</h1>
-              <h3 class="home__subtitle">Full stack Developer</h3>
-              <p class="home__description">
-                Passionate Full stack developer with experience in HTML, CSS,
-                JavaScript, React.js, Node.js, EXpress.js, MongoDB and
-                Bootstrap. Skilled in making API and integration it and creating
-                user engaging interfaces.
-              </p>
-              <a href="#contact" class="button button--flex home__button">
-                Contact Me<i class="uil uil-message button__icon"></i>
-              </a>
-            </div>
-          </div>
-
-          <div class="home__scroll">
-            <a href="#about" class="home__scroll-button button--flex">
-              <i class="uil uil-mouse-alt home__scroll-mouse"></i>
-              <span class="home__scroll-name">Scroll Down</span>
-              <i class="uil uil-arrow-down home__scroll-arrow"></i>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!--==================== ABOUT ====================-->
-      <section class="about section" id="about">
-        <h2 class="section__title">About Me</h2>
-        <span class="section__subtitle">My Introduction</span>
-
-        <div class="about__container container grid">
-          <img src="packages/images/pras-2.jpeg" alt="" class="about__img" />
-          <div class="about__data">
-            <p class="about__description">
-              I am a motivated developer with 1.5+ years of experience in
-              full-stack web development. With a Bachelor's degree in Computer
-              Science, I have worked on building responsive and scalable web
-              applications using React.js, Next.js, Node.js, Express.js,
-              MongoDB, SQL, PostgreSQL, HTML, CSS, JavaScript, Bootstrap,
-              Tailwind CSS, and more. Skilled in API creation and integration,
-              DOM manipulation, UI/UX improvements, web scraping, and
-              automation, I am at an intermediate level and continuously
-              expanding my expertise to contribute effectively to organizational
-              growth.
-            </p>
-            <div class="about__info">
-              <div>
-                <span class="about__info-title">1.5+</span>
-                <span class="about__info-name"
-                  >Years <br />
-                  experience</span
-                >
-              </div>
-              <div>
-                <span class="about__info-title">05+</span>
-                <span class="about__info-name"
-                  >Completed <br />
-                  certifications</span
-                >
-              </div>
-              <div>
-                <span class="about__info-title">03</span>
-                <span class="about__info-name">companies<br />worked</span>
-              </div>
-            </div>
-
-            <div class="about__buttons">
-              <a
-                download=""
-                href="packages\pdf\Mohit's Resume.pdf"
-                class="button button--flex"
-              >
-                Download CV<i class="uil uil-download-alt button__icon"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!--==================== SKILLS ====================-->
-      <section class="skills section" id="skills">
-        <h2 class="section__title">Skills</h2>
-        <span class="section__subtitle">My technical level</span>
-
-        <div class="skills__container container grid">
-          <div>
-            <!--==================== SKILL-1 ====================-->
-            <div class="skills__content skills__open">
-              <div class="skills__header">
-                <i class="uil uil-analytics skills__icon"></i>
-                <div>
-                  <h1 class="skills__title">Programming Language</h1>
-                  <span class="skills__subtitle">Intermediate</span>
-                </div>
-                <i class="uil uil-angle-down skills__arrow"></i>
-              </div>
-              <div class="skills__list grid">
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">C++</h3>
-                    <span class="skills__number">70%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <span class="skills__percentage skills__C"></span>
-                  </div>
-                </div>
-
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">JAVA</h3>
-                    <span class="skills__number">90%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <span class="skills__percentage skills__java"></span>
-                  </div>
-                </div>
-
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">SQL</h3>
-                    <span class="skills__number">80%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <span class="skills__percentage skills__sql"></span>
-                  </div>
-                </div>
-
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">JavaScript</h3>
-                    <span class="skills__number">90%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <span class="skills__percentage skills__javaScript"></span>
-                  </div>
-                </div>
-
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">Python</h3>
-                    <span class="skills__number">85%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <span class="skills__percentage skills__python"></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <!--==================== SKILLS 3 ====================-->
-            <div class="skills__content skills__close">
-              <div class="skills__header">
-                <i class="uil uil-brackets-curly skills__icon"></i>
-                <div>
-                  <h1 class="skills__title">Web Developer</h1>
-                  <span class="skills__subtitle">1.5+ Years Experience</span>
-                </div>
-                <i class="uil uil-angle-down skills__arrow"></i>
-              </div>
-              <div class="skills__list grid">
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">HTML</h3>
-                    <span class="skills__number">90%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <span class="skills__percentage skills__html"></span>
-                  </div>
-                </div>
-
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">CSS</h3>
-                    <span class="skills__number">90%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <span class="skills__percentage skills__css"></span>
-                  </div>
-                </div>
-
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">JavaScript</h3>
-                    <span class="skills__number">95%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <span class="skills__percentage skills__js"></span>
-                  </div>
-                </div>
-
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">Bootstrap</h3>
-                    <span class="skills__number">100%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <span class="skills__percentage skills__Bootstrap"></span>
-                  </div>
-                </div>
-
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">ReactJs</h3>
-                    <span class="skills__number">95%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <span class="skills__percentage skills__ReactJs"></span>
-                  </div>
-                </div>
-
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">NodeJs</h3>
-                    <span class="skills__number">96%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <span class="skills__percentage skills__NodeJs"></span>
-                  </div>
-                </div>
-
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">Express</h3>
-                    <span class="skills__number">90%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <span class="skills__percentage skills__Express"></span>
-                  </div>
-                </div>
-
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">Tailwind CSS</h3>
-                    <span class="skills__number">100%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <span class="skills__percentage skills__tailwind"></span>
-                  </div>
-                </div>
-
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">MongoDB</h3>
-                    <span class="skills__number">90%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <span class="skills__percentage skills__mongo"></span>
-                  </div>
-                </div>
-
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">TypeScript</h3>
-                    <span class="skills__number">80%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <span class="skills__percentage skills__typescript"></span>
-                  </div>
-                </div>
-
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">Next.js</h3>
-                    <span class="skills__number">85%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <span class="skills__percentage skills__nextjs"></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!--==================== QUALIFICATION ====================-->
-      <section class="qualification__section">
-        <h2 class="section__title">Qualification</h2>
-        <span class="section__subtitle">My personal journey</span>
-
-        <div class="qualification__container container">
-          <div class="qualification__tabs">
-            <div
-              class="qualification__button button--flex qualification__active"
-              data-target="#work"
-            >
-              <i class="uil uil-briefcase-alt qualification__icon"></i>
-              Work
-            </div>
-
-            <div
-              class="qualification__button button--flex"
-              data-target="#education"
-            >
-              <i class="uil uil-graduation-cap qualification__icon"></i>
-              Education
-            </div>
-          </div>
-
-          <div class="qualification__sections">
-            <!--==================== WORK CONTENT  ====================-->
-            <div
-              class="qualification__content qualification__active"
-              data-content
-              id="work"
-            >
-              <!--==================== QUALIFICATION 1 ====================-->
-              <div class="qualification__data">
-                <div></div>
-                <div>
-                  <span class="qualification__rounder"></span>
-                  <span class="qualification__line"></span>
-                </div>
-                <div>
-                  <h3 class="qualification__title">Full Stack Developer</h3>
-                  <span class="qualification__subtitle"
-                    >VFPL Capital , Delhi</span
-                  >
-                  <div class="qualification__calendar">
-                    <i class="uil uil-calendar-alt"></i>
-                    2023 - 2025
-                  </div>
-                </div>
-              </div>
-
-              <!--==================== QUALIFICATION 2 ====================-->
-              <div class="qualification__data">
-                <div>
-                  <h3 class="qualification__title">
-                    Frontend (React.js) Developer
-                  </h3>
-                  <span class="qualification__subtitle"
-                    >SIMMI Foundation , Haryana</span
-                  >
-                  <div class="qualification__calendar">
-                    <i class="uil uil-calendar-alt"></i>
-                    2022 - 2023
-                  </div>
-                </div>
-
-                <div>
-                  <span class="qualification__rounder"></span>
-                  <span class="qualification__line"></span>
-                </div>
-              </div>
-            </div>
-
-            <!--==================== QUALIFICATION CONTENT  ====================-->
-            <div class="qualification__content" data-content id="education">
-              <!--==================== QUALIFICATION 1 ====================-->
-              <div class="qualification__data">
-                <div>
-                  <h3 class="qualification__title">10th</h3>
-                  <span class="qualification__subtitle"
-                    >Mount Olivet Sr. Sec. School</span
-                  >
-                  <div class="qualification__calendar">
-                    <i class="uil uil-calendar-alt"></i>
-                    2016
-                  </div>
-                </div>
-
-                <div>
-                  <span class="qualification__rounder"></span>
-                  <span class="qualification__line"></span>
-                </div>
-              </div>
-
-              <!--==================== QUALIFICATION 2 ====================-->
-              <div class="qualification__data">
-                <div></div>
-                <div>
-                  <span class="qualification__rounder"></span>
-                  <span class="qualification__line"></span>
-                </div>
-
-                <div>
-                  <h3 class="qualification__title">12th</h3>
-                  <span class="qualification__subtitle"
-                    >Govt Boys Senior Secondary School , Delhi Roop Nagar
-                    no.2</span
-                  >
-                  <div class="qualification__calendar">
-                    <i class="uil uil-calendar-alt"></i>
-                    2018
-                  </div>
-                </div>
-              </div>
-
-              <!--==================== QUALIFICATION 3 ====================-->
-              <div class="qualification__data">
-                <div>
-                  <h3 class="qualification__title">Bachelor Of Technology</h3>
-                  <span class="qualification__subtitle"
-                    >Guru Gobind Singh Indraprastha University</span
-                  >
-                  <div class="qualification__calendar">
-                    <i class="uil uil-calendar-alt"></i>
-                    2019 - 2023
-                  </div>
-                </div>
-
-                <div>
-                  <span class="qualification__rounder"></span>
-                  <span class="qualification__line"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!--==================== SERVICES ====================-->
-      <section class="services section" id="services">
-        <h2 class="section__title">Services</h2>
-        <span class="section__subtitle">What I offer</span>
-
-        <div class="services__container container grid">
-          <!--==================== SERVICES 1 ====================-->
-          <div class="services__content">
-            <div>
-              <i class="uil uil-arrow services__icon"></i>
-              <h3 class="services__title">Web Developer<br /></h3>
-            </div>
-            <span
-              class="button button--flex button--small button--link services__button"
-            >
-              View more
-              <i class="uil uil-arrow-right button__icon"></i>
-            </span>
-
-            <div class="services__modal">
-              <div class="services__modal-content">
-                <h4 class="services__modal-title">Web Developer<br /></h4>
-                <i class="uil uil-times services__modal-close"></i>
-
-                <ul class="services__modal-services grid">
-                  <li class="services__modal-service">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>I develop the full stack application.</p>
-                  </li>
-
-                  <li class="services__modal-service">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>Webpage development.</p>
-                  </li>
-
-                  <li class="services__modal-service">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>I create Ux element interactions.</p>
-                  </li>
-
-                  <li class="services__modal-service">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>Well trained in ReactJs.</p>
-                  </li>
-                  <li class="services__modal-service">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>Well trained in Api creation.</p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!--==================== SERVICES 2 ====================-->
-          <div class="services__content">
-            <div>
-              <i class="uil uil-server services__icon"></i>
-              <h3 class="services__title">Backend Development<br /></h3>
-            </div>
-            <span
-              class="button button--flex button--small button--link services__button"
-            >
-              View more
-              <i class="uil uil-arrow-right button__icon"></i>
-            </span>
-
-            <div class="services__modal">
-              <div class="services__modal-content">
-                <h4 class="services__modal-title">Backend Development<br /></h4>
-                <i class="uil uil-times services__modal-close"></i>
-
-                <ul class="services__modal-services grid">
-                  <li class="services__modal-service">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>
-                      Develop RESTful APIs using Node.js, Express, and Spring
-                      Boot.
-                    </p>
-                  </li>
-
-                  <li class="services__modal-service">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>Implement authentication & authorization using JWT.</p>
-                  </li>
-
-                  <li class="services__modal-service">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>
-                      Manage SQL (PostgreSQL, MySQL) and NoSQL (MongoDB)
-                      databases.
-                    </p>
-                  </li>
-
-                  <li class="services__modal-service">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>Optimize API performance & database queries.</p>
-                  </li>
-
-                  <li class="services__modal-service">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>Test APIs using Postman.</p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!--==================== SERVICES 3 ====================-->
-          <div class="services__content">
-            <div>
-              <i class="uil uil-laptop-code services__icon"></i>
-              <h3 class="services__title">Frontend Development<br /></h3>
-            </div>
-            <span
-              class="button button--flex button--small button--link services__button"
-            >
-              View more
-              <i class="uil uil-arrow-right button__icon"></i>
-            </span>
-
-            <div class="services__modal">
-              <div class="services__modal-content">
-                <h4 class="services__modal-title">
-                  Frontend Development<br />
-                </h4>
-                <i class="uil uil-times services__modal-close"></i>
-
-                <ul class="services__modal-services grid">
-                  <li class="services__modal-service">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>Build high-performance UIs with React.js & Next.js.</p>
-                  </li>
-
-                  <li class="services__modal-service">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>
-                      Use modern styling frameworks: Tailwind CSS, Material UI,
-                      Bootstrap.
-                    </p>
-                  </li>
-
-                  <li class="services__modal-service">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>Manage state efficiently with Redux.</p>
-                  </li>
-
-                  <li class="services__modal-service">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>Ensure responsive & accessible designs.</p>
-                  </li>
-
-                  <li class="services__modal-service">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>Optimize frontend performance & SEO.</p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!--==================== SERVICES 4 ====================-->
-          <div class="services__content">
-            <div>
-              <i class="uil uil-database services__icon"></i>
-              <h3 class="services__title">Automation & Web Scraping<br /></h3>
-            </div>
-            <span
-              class="button button--flex button--small button--link services__button"
-            >
-              View more
-              <i class="uil uil-arrow-right button__icon"></i>
-            </span>
-
-            <div class="services__modal">
-              <div class="services__modal-content">
-                <h4 class="services__modal-title">
-                  Automation & Web Scraping<br />
-                </h4>
-                <i class="uil uil-times services__modal-close"></i>
-
-                <ul class="services__modal-services grid">
-                  <li class="services__modal-service">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>Automate repetitive tasks with scripting.</p>
-                  </li>
-
-                  <li class="services__modal-service">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>Extract and process data using web scraping.</p>
-                  </li>
-
-                  <li class="services__modal-service">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>Handle large datasets efficiently.</p>
-                  </li>
-
-                  <li class="services__modal-service">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>Implement automation tools for data collection.</p>
-                  </li>
-
-                  <li class="services__modal-service">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>Ensure compliance with ethical scraping policies.</p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!--==================== SERVICES 5 ====================-->
-          <div class="services__content">
-            <div>
-              <i class="uil uil-pen services__icon"></i>
-              <h3 class="services__title">Content Writing<br /></h3>
-            </div>
-            <span
-              class="button button--flex button--small button--link services__button"
-            >
-              View more
-              <i class="uil uil-arrow-right button__icon"></i>
-            </span>
-
-            <div class="services__modal">
-              <div class="services__modal-content">
-                <h4 class="services__modal-title">Content Writing<br /></h4>
-                <i class="uil uil-times services__modal-close"></i>
-
-                <ul class="services__modal-services grid">
-                  <li class="services__modal-service">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>Write technical blogs, documentation, and articles.</p>
-                  </li>
-
-                  <li class="services__modal-service">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>Create engaging web content for different industries.</p>
-                  </li>
-
-                  <li class="services__modal-service">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>SEO-optimized content for better search ranking.</p>
-                  </li>
-
-                  <li class="services__modal-service">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>
-                      Develop user guides & tutorials for software applications.
-                    </p>
-                  </li>
-
-                  <li class="services__modal-service">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>Proofreading and content editing for clarity.</p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!--==================== PORTFOLIO ====================-->
-      <section class="portfolio section" id="portfolio">
-        <h2 class="section__title">Portfolio</h2>
-        <span class="section__subtitle">Most recent works</span>
-
-        <div class="portfolio__container container swiper-container">
-          <div class="swiper-wrapper">
-            <!--==================== PORTFOLIO 1 ====================-->
-
-            <div class="portfolio__content grid swiper-slide">
-              <img
-                src="./packages/images/portfolio1.png"
-                alt=""
-                class="portfolio__img"
-              />
-
-              <div class="portfolio_">
-                <h3 class="portfolio__title">Ecommerce Store</h3>
-                <p class="portfolio__description">
-                  Built an Ecommerce store using MERN stack and Stripe for
-                  payments. Leveraged React.js, Express.js, Node.js, and
-                  MongoDB. Implemented product listing, shopping cart, user
-                  authentication, and order management. Integrated Stripe API
-                  for secure payments. Created a seamless and responsive
-                  shopping experience.
-                </p>
-                <a
-                  href="https://mohitsotre.onrender.com/"
-                  class="button button--flex button--small portfolio__button"
-                >
-                  Demo
-                  <i class="uil uil-arrow-right button__icon"></i>
-                </a>
-              </div>
-            </div>
-
-            <!--==================== PORTFOLIO 2 ====================-->
-
-            <div class="portfolio__content grid swiper-slide">
-              <img
-                src="./packages/images/portfolio2.png"
-                alt=""
-                class="portfolio__img"
-              />
-
-              <div class="portfolio_">
-                <h3 class="portfolio__title">E-Learning Platform</h3>
-                <p class="portfolio__description">
-                  Developed an E-Learning platform using MERN stack, leveraging
-                  React.js, Express.js, Node.js, and MongoDB. Integrated
-                  Razorpay for secure payment processing. Built interactive
-                  courses, user authentication, and progress tracking features.
-                  Ensured a seamless and engaging learning experience for users.
-                </p>
-                <a
-                  href="https://coursebundler-ten.vercel.app/"
-                  class="button button--flex button--small portfolio__button"
-                >
-                  Demo
-                  <i class="uil uil-arrow-right button__icon"></i>
-                </a>
-              </div>
-            </div>
-
-            <!--==================== PORTFOLIO 3 ====================-->
-
-            <div class="portfolio__content grid swiper-slide">
-              <img
-                src="./packages/images/portfolio3.png"
-                alt=""
-                class="portfolio__img"
-              />
-
-              <div class="portfolio_">
-                <h3 class="portfolio__title">Portfolio + Blog</h3>
-                <p class="portfolio__description">
-                  Developed a personal portfolio website with an integrated blog
-                  using React.js. Utilized Sanity as a headless CMS to manage
-                  and display blog posts. Showcased my skills, projects, and
-                  blog articles in a sleek and professional design. Implemented
-                  responsive layouts for seamless browsing across devices,
-                  ensuring a captivating user experience.
-                </p>
-                <a
-                  href="https://myfile-one.vercel.app/"
-                  class="button button--flex button--small portfolio__button"
-                >
-                  Demo
-                  <i class="uil uil-arrow-right button__icon"></i>
-                </a>
-              </div>
-            </div>
-
-            <!--==================== PORTFOLIO 4 ====================-->
-
-            <div class="portfolio__content grid swiper-slide">
-              <img
-                src="./packages/images/portfolio4.png"
-                alt=""
-                class="portfolio__img"
-              />
-
-              <div class="portfolio_">
-                <h3 class="portfolio__title">HTML Canvas Based Game</h3>
-                <p class="portfolio__description">
-                  Designed and developed an engaging 2D game using HTML, CSS,
-                  JavaScript, and HTML Canvas. Created captivating visuals and
-                  animations using CSS styles and utilized HTML Canvas to handle
-                  game logic and interactions.
-                </p>
-                <a
-                  href="https://m0hitmehra.github.io/CanvasGame/"
-                  class="button button--flex button--small portfolio__button"
-                >
-                  Demo
-                  <i class="uil uil-arrow-right button__icon"></i>
-                </a>
-              </div>
-            </div>
-            <!--==================== PORTFOLIO 5 ====================-->
-
-            <div class="portfolio__content grid swiper-slide">
-              <img
-                src="./packages/images/portfolio5.png"
-                alt=""
-                class="portfolio__img"
-              />
-
-              <div class="portfolio_">
-                <h3 class="portfolio__title">Chat App</h3>
-                <p class="portfolio__description">
-                  Developed a robust chat application using React.js, Firebase
-                  for real-time database and authentication, and Chakra UI for a
-                  modern and intuitive user interface. Utilized React's
-                  component-driven approach to create dynamic and interactive
-                  chat features, enabling users to send and receive messages in
-                  real-time. Integrated Firebase to securely store chat data and
-                  manage user authentication for a seamless and personalized
-                  experience. Implemented Chakra UI to design an attractive and
-                  user-friendly interface with customizable components.
-                </p>
-                <a
-                  href="https://62c15bb830935f66124ab50f--stirring-mermaid-941036.netlify.app/"
-                  class="button button--flex button--small portfolio__button"
-                >
-                  Demo
-                  <i class="uil uil-arrow-right button__icon"></i>
-                </a>
-              </div>
-            </div>
-            <!--==================== PORTFOLIO 6 ====================-->
-
-            <div class="portfolio__content grid swiper-slide">
-              <img
-                src="./packages/images/portfolio6.jpg"
-                alt=""
-                class="portfolio__img"
-              />
-
-              <div class="portfolio_">
-                <h3 class="portfolio__title">To Do APP</h3>
-                <p class="portfolio__description">
-                  Developed a user-friendly To-Do app using React Native and the
-                  MERN stack (MongoDB, Express.js, React.js, and Node.js).
-                  Leveraged the power of React Native to build a cross-platform
-                  application with a native look and feel. Integrated MongoDB as
-                  the database to securely store and manage tasks. Implemented
-                  an intuitive user interface, allowing users to easily add,
-                  update, and mark tasks as completed. Utilized Express.js and
-                  Node.js for seamless server-side functionality and API
-                  integration. Conducted thorough testing and implemented error
-                  handling to ensure a smooth and reliable user experience.
-                </p>
-
-                <a
-                  download=""
-                  href="packages/images/todoapp.apk"
-                  class="button button--flex button--small portfolio__button"
-                >
-                  Demo
-                  <i class="uil uil-arrow-right button__icon"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- add arrows-->
-          <div class="swiper-button-next">
-            <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-          </div>
-
-          <div class="swiper-button-prev">
-            <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-          </div>
-
-          <!-- Add Pagination -->
-          <div class="swiper-pagination"></div>
-        </div>
-      </section>
-
-      <!--==================== PROJECT IN MIND ====================-->
-      <section class="project section">
-        <div class="project__bg">
-          <div class="project__container container grid">
-            <div class="project__data">
-              <h2 class="project__title">You have a new project?</h2>
-              <!-- <p class="project__description">Contact me now and get discounts on your Web development projects.</p> -->
-              <a href="#contact" class="button button--flex button--white"
-                >Contact me
-                <i class="uil uil-message project__icon button__icon"></i>
-              </a>
-            </div>
-            <!-- <img src="assets/img/project.png" alt="" class="project__img"> -->
-          </div>
-        </div>
-      </section>
-
-      <!--==================== CONTACT ME ====================-->
-      <section class="contact section" id="contact">
-        <h2 class="section__title">Contact me</h2>
-        <span class="section__subtitle">Get in touch</span>
-
-        <div class="contact__container container grid">
-          <div>
-            <div class="contact__information">
-              <i class="uil uil-phone-alt contact__icon"></i>
-
-              <div>
-                <h3 class="contact__title">Call me</h3>
-                <span class="contatc__subtitle">(+91) 9625945052</span>
-              </div>
-            </div>
-
-            <div class="contact__information">
-              <i class="uil uil-envelope contact__icon"></i>
-
-              <div>
-                <h3 class="contact__title">E-mail</h3>
-                <span class="contatc__subtitle">mehramohit532@gmail.com</span>
-              </div>
-            </div>
-
-            <div class="contact__information">
-              <i class="uil uil-map-marker contact__icon"></i>
-
-              <div>
-                <h3 class="contact__title">Location</h3>
-                <span class="contatc__subtitle">Delhi, India</span>
-              </div>
-            </div>
-          </div>
-
-          <form action="" class="contact__form grid">
-            <div class="contact__inputs grid">
-              <div class="contact__content">
-                <label for="" class="contact__label">Name</label>
-                <input type="text" class="contact__input" id="name" required />
-              </div>
-
-              <div class="contact__content">
-                <label for="" class="contact__label">E-mail</label>
-                <input
-                  type="email"
-                  class="contact__input"
-                  id="email"
-                  required
-                />
-              </div>
-            </div>
-
-            <div class="contact__content">
-              <label for="" class="contact__label">Subject</label>
-              <input type="text" class="contact__input" id="subject" required />
-            </div>
-
-            <div class="contact__content">
-              <label for="" class="contact__label">Description</label>
-              <textarea
-                name=""
-                cols="0"
-                rows="7"
-                class="contact__input"
-                id="description"
-                required
-              ></textarea>
-            </div>
-
-            <div>
-              <a
-                class="button button--flex"
-                onclick="SendDetails()"
-                style="cursor: pointer"
-              >
-                Send message
-                <i
-                  class="uil uil-message button__icon"
-                  style="cursor: pointer"
-                ></i>
-              </a>
-            </div>
-          </form>
-        </div>
-      </section>
-    </main>
-
-    <!--==================== FOOTER ====================-->
-    <footer class="footer">
-      <div class="footer__bg">
-        <div class="footer__container container grid">
-          <div>
-            <h1 class="footer__title">Mohit Mehra</h1>
-            <span class="footer__subtitle">Full stack Developer</span>
-          </div>
-
-          <ul class="footer__links">
-            <li>
-              <a href="#services" class="footer__link">Services</a>
-            </li>
-            <li>
-              <a href="#portfolio" class="footer__link">Portfolio</a>
-            </li>
-            <li>
-              <a href="#contact" class="footer__link">Contact</a>
-            </li>
-          </ul>
-
-          <div class="footer__socials">
-            <a
-              href="https://www.facebook.com/profile.php?id=100005657746091"
-              target="_blank"
-              class="footer__social"
-            >
-              <i class="uil uil-facebook"></i>
-            </a>
-            <a
-              href="https://www.instagram.com/mohitmehra5609/"
-              target="_blank"
-              class="footer__social"
-            >
-              <i class="uil uil-instagram"></i>
-            </a>
-            <a
-              href="https://twitter.com/M0hitMehra"
-              target="_blank"
-              class="footer__social"
-            >
-              <i class="uil uil-twitter-alt"></i>
-            </a>
-          </div>
-        </div>
-        <p class="footer__copy">&#169; Mohit Mehra. All rights reserved.</p>
       </div>
-    </footer>
 
-    <!--==================== SCROLL TOP ====================-->
-    <a href="#" class="scrollup" id="scroll-up">
-      <i class="uil uil-arrow-up scrollup__icon"></i>
-    </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="nav-link active">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
 
-    <!--==================== SWIPER JS ====================-->
-    <script src="./packages/js/swiper-bundle.min.js"></script>
+      <div class="nav-actions">
+        <!-- Tactile Sound Effect Toggle -->
+        <button class="neu-icon-btn" id="soundToggleBtn" title="Tactile Sound Feedback" aria-label="Toggle Tactile Sound">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          </svg>
+        </button>
 
-    <!--==================== MAIN JS ====================-->
-    <script src="./packages/js/main.js"></script>
-  </body>
+        <!-- Theme Mode Switcher (Dark Cybertruck vs Light Clay) -->
+        <button class="theme-switch-btn" id="themeToggleBtn" title="Toggle Neumorphic Theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <span>Cybertruck Dark</span>
+        </button>
+
+        <!-- View Resume CTA -->
+        <button class="neu-btn neu-btn-primary open-resume-btn">
+          <span>Resume</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+        </button>
+
+        <!-- Mobile Drawer Hamburger -->
+        <button class="neu-icon-btn mobile-menu-btn" id="mobileMenuBtn" aria-label="Open Mobile Menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <main>
+    <!-- ==============================================================================
+         HERO SECTION
+         ============================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="status-pill" id="statusPill">
+            <span class="status-dot"></span>
+            <span>Open to Senior & SDE-2 Opportunities</span>
+          </div>
+
+          <h1 class="hero-title" id="heroTitle">
+            Hi, I'm <span class="highlight">Mohit Mehra</span>.
+          </h1>
+
+          <div class="hero-role-badge" id="heroRole">
+            Software Development Engineer - 2 (SDE-2)
+          </div>
+
+          <p class="hero-bio" id="heroBio">
+            Full Stack & Distributed Systems Engineer specializing in high-throughput microservices, event-driven pipelines on RabbitMQ/Kafka, and production AI tooling (Model Context Protocol).
+          </p>
+
+          <div class="hero-metrics-strip" id="heroMetricsStrip">
+            <!-- Injected dynamically from portfolio-data.js -->
+          </div>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="neu-btn neu-btn-primary">
+              <span>Explore Projects</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <button class="neu-btn open-resume-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+              <span>View Full Resume</span>
+            </button>
+            <a href="#contact" class="neu-btn">
+              <span>Get In Touch</span>
+            </a>
+          </div>
+
+          <div class="social-pills-row" id="socialPillsRow">
+            <!-- Injected dynamically from portfolio-data.js -->
+          </div>
+        </div>
+
+        <!-- Right Side: Clean Neumorphic Profile Card -->
+        <div class="hero-profile-card neu-card">
+          <div class="profile-avatar-bezel">
+            <img src="https://avatars.githubusercontent.com/u/98013205?v=4" alt="Mohit Mehra" id="heroAvatarImg" class="profile-avatar-img">
+            <span class="status-indicator-badge" title="Available for opportunities"></span>
+          </div>
+          <div class="profile-card-details">
+            <h3 class="profile-card-name" id="cardFullName">Mohit Mehra</h3>
+            <p class="profile-card-role" id="cardRole">Software Development Engineer - 2</p>
+            <p class="profile-card-company" id="cardCompany">🏢 VFPL Capital • Delhi, India</p>
+          </div>
+          <div class="profile-quick-stats">
+            <div class="quick-stat-box">
+              <span class="stat-number">3+</span>
+              <span class="stat-label">Years Exp</span>
+            </div>
+            <div class="quick-stat-box">
+              <span class="stat-number">1K</span>
+              <span class="stat-label">RPS Scale</span>
+            </div>
+            <div class="quick-stat-box">
+              <span class="stat-number">60+</span>
+              <span class="stat-label">Public Repos</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================================================
+         WORK EXPERIENCE SECTION
+         ============================================================================== -->
+    <section class="section-wrapper" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+            <span>CAREER TRACK RECORD</span>
+          </div>
+          <h2 class="section-title">Professional Experience</h2>
+          <p class="section-desc">End-to-end engineering leadership, system reliability, and microservices architecture.</p>
+        </div>
+
+        <div class="experience-container" id="experienceContainer">
+          <!-- Injected dynamically from portfolio-data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================================================
+         FEATURED PROJECTS SECTION
+         ============================================================================== -->
+    <section class="section-wrapper" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            <span>CODE & SYSTEMS</span>
+          </div>
+          <h2 class="section-title">Featured Engineering Projects</h2>
+          <p class="section-desc">Open-source distributed systems, collaborative real-time suites, and production AI tooling.</p>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="projects-filter-bar" id="projectsFilterBar">
+          <!-- Injected dynamically -->
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Injected dynamically from portfolio-data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================================================
+         TECHNICAL SKILLS MATRIX
+         ============================================================================== -->
+    <section class="section-wrapper" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+            <span>CORE COMPETENCIES</span>
+          </div>
+          <h2 class="section-title">Technical Skills & Design</h2>
+          <p class="section-desc">Extensive background in scalable system architecture, message brokers, caching, and full-stack engineering.</p>
+        </div>
+
+        <div class="skills-grid" id="skillsGrid">
+          <!-- Injected dynamically from portfolio-data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================================================
+         EDUCATION & CONTACT SECTION (SPLIT)
+         ============================================================================== -->
+    <section class="section-wrapper" id="contact">
+      <div class="container">
+        <div class="split-grid">
+          <!-- Left Column: Education & Quick Contact -->
+          <div>
+            <div class="section-eyebrow" style="margin-bottom: 16px;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path></svg>
+              <span>ACADEMICS</span>
+            </div>
+            <h2 class="section-title" style="text-align: left; margin-bottom: 24px;">Education</h2>
+            <div id="educationContainer"></div>
+
+            <div class="section-eyebrow" style="margin-top: 32px; margin-bottom: 16px;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>CONNECT DIRECTLY</span>
+            </div>
+            <h2 class="section-title" style="text-align: left; margin-bottom: 24px;">Quick Contact</h2>
+            <div class="neu-card contact-card">
+              <div id="contactMethodsList">
+                <!-- Injected dynamically from portfolio-data.js with 1-click copy -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Neumorphic Message Box -->
+          <div>
+            <div class="section-eyebrow" style="margin-bottom: 16px;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+              <span>SEND A MESSAGE</span>
+            </div>
+            <h2 class="section-title" style="text-align: left; margin-bottom: 24px;">Let's Connect</h2>
+            <div class="neu-card contact-card">
+              <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                Looking for a senior full-stack or backend engineer to scale high-throughput products, integrate AI systems, or consult on distributed architectures? Reach out directly.
+              </p>
+              <form id="portfolioContactForm" class="contact-form">
+                <div>
+                  <input type="text" id="formName" class="neu-input" placeholder="Your Name" required>
+                </div>
+                <div>
+                  <input type="email" id="formEmail" class="neu-input" placeholder="Your Email Address" required>
+                </div>
+                <div>
+                  <input type="text" id="formSubject" class="neu-input" placeholder="Subject / Opportunity / Topic" required>
+                </div>
+                <div>
+                  <textarea id="formMessage" class="neu-textarea" placeholder="How can Mohit help your engineering team?" required></textarea>
+                </div>
+                <button type="submit" class="neu-btn neu-btn-primary" style="margin-top: 8px;">
+                  <span>Transmit Message</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==============================================================================
+       FOOTER
+       ============================================================================== -->
+  <footer class="portfolio-footer container">
+    <div class="brand-badge">
+      <div class="brand-logo-pod">MM</div>
+      <span style="font-weight: 800; font-size: 1.1rem;">Mohit Mehra</span>
+    </div>
+    <div class="footer-copy">
+      © <span id="currentYear">2026</span> Mohit Mehra. Crafted with tactile Neumorphism architecture.
+    </div>
+    <div class="footer-source-note">
+      ⚙️ All content, projects, assets & links centralized in <code>portfolio-data.js</code>
+    </div>
+  </footer>
+
+  <!-- ==============================================================================
+       ATS-READY RESUME MODAL & PRINT VIEW
+       ============================================================================== -->
+  <div class="modal-overlay" id="resumeModalOverlay" role="dialog" aria-modal="true" aria-label="Resume Document">
+    <div class="resume-modal">
+      <div class="modal-header-bar">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div class="brand-logo-pod" style="width: 36px; height: 36px; font-size: 0.9rem;">MM</div>
+          <span class="modal-title">Mohit Mehra — SDE-2 Resume</span>
+        </div>
+        <div class="modal-actions">
+          <button class="neu-btn neu-btn-primary" id="printResumeBtn" style="padding: 8px 16px; font-size: 0.85rem;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+            <span>Print / Save PDF</span>
+          </button>
+          <button class="neu-icon-btn" id="closeResumeModalBtn" style="width: 38px; height: 38px;" title="Close Modal">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
+      </div>
+      <div class="modal-content-scroll">
+        <div id="resumeDocContainer">
+          <!-- Rendered dynamically by app.js -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Load Data Config first, then Controller -->
+  <script src="portfolio-data.js"></script>
+  <script src="app.js"></script>
+</body>
 </html>
